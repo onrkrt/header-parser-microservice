@@ -5,8 +5,8 @@ var app = express();
 app.use((req,res)=>{
 	var info = req.headers;
 	// This algorithm inspired to
-    // http://stackoverflow.com/a/2403159
-    var pattern = /\(.*?\)/gi;
+   	// http://stackoverflow.com/a/2403159
+    	var pattern = /\(.*?\)/gi;
 	var osInfo = pattern.exec(info["user-agent"])[0].slice(1,-1);
 	var lang = info["accept-language"].split(",")[0];
 	var ip = req.ip;
